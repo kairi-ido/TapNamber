@@ -15,6 +15,9 @@
 		413B81432519AC0900ECAA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413B81412519AC0900ECAA91 /* LaunchScreen.storyboard */; };
 		413B814E2519AC0900ECAA91 /* TapNamberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B814D2519AC0900ECAA91 /* TapNamberTests.swift */; };
 		413B81592519AC0A00ECAA91 /* TapNamberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B81582519AC0A00ECAA91 /* TapNamberUITests.swift */; };
+		413B816A2519AE4200ECAA91 /* TapNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B81692519AE4200ECAA91 /* TapNumberViewController.swift */; };
+		413B816F2519AE6700ECAA91 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B816E2519AE6700ECAA91 /* ResultViewController.swift */; };
+		413B81772519AE8700ECAA91 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B81762519AE8700ECAA91 /* RankingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		413B81542519AC0900ECAA91 /* TapNamberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapNamberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		413B81582519AC0A00ECAA91 /* TapNamberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapNamberUITests.swift; sourceTree = "<group>"; };
 		413B815A2519AC0A00ECAA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413B81692519AE4200ECAA91 /* TapNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapNumberViewController.swift; sourceTree = "<group>"; };
+		413B816E2519AE6700ECAA91 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		413B81762519AE8700ECAA91 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				413B81362519AC0500ECAA91 /* AppDelegate.swift */,
 				413B81382519AC0500ECAA91 /* SceneDelegate.swift */,
 				413B813A2519AC0500ECAA91 /* ViewController.swift */,
+				413B81692519AE4200ECAA91 /* TapNumberViewController.swift */,
+				413B816E2519AE6700ECAA91 /* ResultViewController.swift */,
+				413B81762519AE8700ECAA91 /* RankingViewController.swift */,
 				413B813C2519AC0500ECAA91 /* Main.storyboard */,
 				413B813F2519AC0900ECAA91 /* Assets.xcassets */,
 				413B81412519AC0900ECAA91 /* LaunchScreen.storyboard */,
@@ -258,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413B816F2519AE6700ECAA91 /* ResultViewController.swift in Sources */,
 				413B813B2519AC0500ECAA91 /* ViewController.swift in Sources */,
+				413B816A2519AE4200ECAA91 /* TapNumberViewController.swift in Sources */,
 				413B81372519AC0500ECAA91 /* AppDelegate.swift in Sources */,
 				413B81392519AC0500ECAA91 /* SceneDelegate.swift in Sources */,
+				413B81772519AE8700ECAA91 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PN9A6G6V4;
 				INFOPLIST_FILE = TapNamber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PN9A6G6V4;
 				INFOPLIST_FILE = TapNamber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
