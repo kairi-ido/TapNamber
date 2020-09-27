@@ -27,7 +27,7 @@ class TapNumberViewController: UIViewController {
     //合計得点を数えるための変数
     var number: Int = 0
     
-    var seikaiArray: [String] = ["0","1","2","3","4","5","6","7","8"]
+    var seikaiArray: [String] = ["0","1","2","3","4","5","6","7","8","9"]
     var index: Int = 0
     
     
@@ -81,6 +81,15 @@ class TapNumberViewController: UIViewController {
         numberButton7.setTitle(numberArray[7] as? String, for: .normal)
         numberButton8.setTitle(numberArray[8] as? String, for: .normal)
         
+        numberButton0.setTitleColor(UIColor.brown, for: .normal)
+        numberButton1.setTitleColor(UIColor.brown, for: .normal)
+        numberButton2.setTitleColor(UIColor.brown, for: .normal)
+        numberButton3.setTitleColor(UIColor.brown, for: .normal)
+        numberButton4.setTitleColor(UIColor.brown, for: .normal)
+        numberButton5.setTitleColor(UIColor.brown, for: .normal)
+        numberButton6.setTitleColor(UIColor.brown, for: .normal)
+        numberButton7.setTitleColor(UIColor.brown, for: .normal)
+        numberButton8.setTitleColor(UIColor.brown, for: .normal)
     }
     
     //タイマー関連のメソッド
@@ -128,14 +137,21 @@ class TapNumberViewController: UIViewController {
         if seikaiArray[index] == sender.currentTitle {
             number = number + 10
             goukeiLabel.text = String(number)
-            sender.isEnabled = false
+            sender.setTitle("", for: .normal)
+           
         }else {
             index = index - 1
-        
         }
         
         index = index + 1
-       
+       print(index)
+        
+        if index > 8{
+            
+            shuffle()
+            
+            index = 0
+        }
         
     }
     
