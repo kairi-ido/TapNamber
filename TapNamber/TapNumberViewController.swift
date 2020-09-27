@@ -28,6 +28,8 @@ class TapNumberViewController: UIViewController {
     
     
     
+    
+    
     //ボタンのパーツを決める宣言
     @IBOutlet var numberButton0:UIButton!
     @IBOutlet var numberButton1:UIButton!
@@ -52,6 +54,7 @@ class TapNumberViewController: UIViewController {
                                      repeats: true)
        shuffle()
         
+       
     }
     
     func shuffle(){
@@ -90,8 +93,7 @@ class TapNumberViewController: UIViewController {
             timer.invalidate()
             //ユーザデフォルトに書き込む
             saveData.set(number, forKey: "save")
-            saveData.set(number, forKey: "save1")
-            
+           
             //結果画面に遷移するようにする
             performSegueToResult()
         }
@@ -99,10 +101,21 @@ class TapNumberViewController: UIViewController {
     }
     //ボタンのメソッド・・・
     @IBAction func tapNumber(sender: UIButton){
+     
+        let seikaiArray: [Int] = [0,1,2,3,4,5,6,7,8]
         
-        number = number + 10
         
-        goukeiLabel.text = String(number)
+        
+        
+        if seikaiArray[0] == sender.tag {
+            number = number + 10
+            goukeiLabel.text = String(number)
+            numberButton0.isEnabled = false
+        }
+        
+        
+        
+        
         
         
     }

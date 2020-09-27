@@ -24,7 +24,7 @@ class RankingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             //データの読み込み
-            number = saveData.object(forKey: "save1") as! Int
+            number = saveData.object(forKey: "save") as! Int
           
             //1位として保存("firstというキーで「number」という値を保存する）"
             saveData.set(number, forKey: "first")
