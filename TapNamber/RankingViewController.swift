@@ -23,21 +23,14 @@ class RankingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            //データの読み込み
-            number = saveData.object(forKey: "save") as! Int
-          
-        //データがない時は
-        if goukeiLabel1.text == "Label" {
-            //1位として保存("firstというキーで「number」という値を保存する）"
-            saveData.set(number, forKey: "first")
-            //1位のデータを読み込む
-            number1 = saveData.object(forKey: "first") as! Int
-            //1位を表示する
-            goukeiLabel1.text = String(number1)
+            
+        goukeiLabel1.text = String(saveData.integer(forKey: "first"))
+        goukeiLabel2.text = String(saveData.integer(forKey: "second"))
+        goukeiLabel3.text = String(saveData.integer(forKey: "third"))
         }
         
         
-    }
+    
     
     
 

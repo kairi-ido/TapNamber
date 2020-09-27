@@ -16,6 +16,7 @@ class TapNumberViewController: UIViewController {
     @IBOutlet var timerLabel2:UILabel!
     //ユーザーデフォルトにアクセスする
     var saveData: UserDefaults = UserDefaults.standard
+   
     
     //通過した数字を表示する
     var count: Float = 15.00
@@ -25,6 +26,10 @@ class TapNumberViewController: UIViewController {
     var numberArray: [Any] = ["0","1","2","3","4","5","6","7","8"]
     //合計得点を数えるための変数
     var number: Int = 0
+    
+    var seikaiArray: [String] = ["0","1","2","3","4","5","6","7","8"]
+    var index: Int = 0
+    
     
     
     
@@ -92,31 +97,45 @@ class TapNumberViewController: UIViewController {
             //タイマーを止める
             timer.invalidate()
             //ユーザデフォルトに書き込む
-            saveData.set(number, forKey: "save")
-           
+            let number1: Int = saveData.integer(forKey: "first")
+            let number2: Int = saveData.integer(forKey: "second")
+            let number3: Int = saveData.integer(forKey: "third")
+
+            if  number > number1 {
+                saveData.set(number, forKey: "first")
+                saveData.set(number1, forKey: "second")
+                saveData.set(number2, forKey: "third")
+            }else if number > number2 {
+                
+                saveData.set(number, forKey: "second")
+                saveData.set(number2, forKey: "third")
+                
+            }else if number > number3 {
+                
+                saveData.set(number, forKey: "third")
+            }
+            saveData.synchronize()
             //結果画面に遷移するようにする
             performSegueToResult()
         }
         
     }
-    //ボタンのメソッド・・・
+    //ボタンのメソッド
     @IBAction func tapNumber(sender: UIButton){
      
-        let seikaiArray: [Int] = [0,1,2,3,4,5,6,7,8]
+    
         
-        
-        
-        
-        if seikaiArray[0] == sender.tag {
+        if seikaiArray[index] == sender.currentTitle {
             number = number + 10
             goukeiLabel.text = String(number)
-            numberButton0.isEnabled = false
+            sender.isEnabled = false
+        }else {
+            index = index - 1
+        
         }
         
-        
-        
-        
-        
+        index = index + 1
+       
         
     }
     
